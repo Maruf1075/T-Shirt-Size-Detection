@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>T-shirt Size Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" id="ts-form">
+            <h1 align="center">T-Shirt Shaper</h1>
+            <div class="input-container">
+                <label for="height">Height (in cm):</label>
+                <input type="number" step="any" id="height" placeholder="Enter your height" required>
+                <label for="weight">Weight (in kg):</label>
+                <input type="number" step="any" id="weight" placeholder="Enter your weight" required>
+                <label for="k">K Value:</label>
+                <input type="number" step="2" min="1" max="11" id="k" placeholder="Enter the value of K"> 
+                <div class="btn">
+                    <button type="submit" onclick="calculateSize()">Calculate</button>
+                    <button onclick="resetall()">Reset</button>
+                </div>
+            </div>
+            <div >
+                <h2 class="result" id="sizeImage"></h2>
+            </div>
+
+        </form>
+    </div>
+    <script src="data.js"></script>
+    <script src="knn.js"></script>
+</body>
+
+</html>
