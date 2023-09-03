@@ -9,6 +9,33 @@ function calculateSize() {
     const weight = parseFloat(document.getElementById('weight').value);
     const k = parseInt(document.getElementById('k').value);
 
+    //error handling
+
+    // if(!(k && height && weight)){
+    //     Swal.fire({
+    //         icon:"error",
+    //         title:"Empty Input",
+    //         text: "Pleae Enter Input",
+    //     });
+    //     return;
+    // }
+    // else if( K < 1 || height < 30 || weight < 10){
+    //     Swal.fire({
+    //         icon:"error",
+    //         title:"Invalid Input",
+    //         text:"Please Enter Valid Input",
+    //     });
+    //     return;
+    // }
+    // else if(k % 2 === 0){
+    //     Swal.fire({
+    //         icon:"error",
+    //         title:"Unsupported K Value",
+    //         text:"Value of K must be a odd number",
+    //     });
+    //     return;
+    // }
+
     if (k <= 0) {
         const sizeImage = document.getElementById('sizeImage');
         sizeImage.innerText = "K value should be greater than zero ( 0 )";
@@ -24,6 +51,18 @@ function calculateSize() {
     if (k % 2 == 0) {
         const sizeImage = document.getElementById('sizeImage');
         sizeImage.innerText = "K value should be ODD";
+        return;
+    }
+
+    if (height < 60) {
+        const sizeImage = document.getElementById('sizeImage');
+        sizeImage.innerText = "Height should be greater than 60cm !!";
+        return;
+    }
+
+    if (weight < 20) {
+        const sizeImage = document.getElementById('sizeImage');
+        sizeImage.innerText = "Weight should be greater than 20kg !!";
         return;
     }
     
