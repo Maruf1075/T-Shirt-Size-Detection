@@ -33,9 +33,21 @@ function calculateSize() {
         return;
     }
 
+    if (height > 210) {
+        const sizeImage = document.getElementById('sizeImage');
+        sizeImage.innerText = "Height should be less than 210cm !!";
+        return;
+    }
+
     if (weight < 20) {
         const sizeImage = document.getElementById('sizeImage');
         sizeImage.innerText = "Weight should be greater than 20kg !!";
+        return;
+    }
+
+    if (weight > 150) {
+        const sizeImage = document.getElementById('sizeImage');
+        sizeImage.innerText = "Weight should be less than 150kg !!";
         return;
     }
     
