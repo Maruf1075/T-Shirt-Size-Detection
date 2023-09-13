@@ -9,7 +9,6 @@ function calculateSize() {
     const weight = parseFloat(document.getElementById('weight').value);
     const k = parseInt(document.getElementById('k').value);
 
-
     if (k <= 0) {
         const sizeImage = document.getElementById('sizeImage');
         sizeImage.innerText = "K value should be greater than zero ( 0 )";
